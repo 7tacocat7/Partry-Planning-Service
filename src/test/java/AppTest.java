@@ -9,7 +9,7 @@ public class AppTest {
 
     @Test
     public void newEvent_instantiatesCorrectly() throws Exception{
-        Event testEvent = new Event (20,"mexican", "open bar", "live band");
+        Event testEvent = new Event("Carsons birthday",50,"thai food","open bar","live band", "");
         assertEquals(true, testEvent instanceof  Event);
     }
 
