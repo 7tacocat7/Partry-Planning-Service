@@ -74,11 +74,11 @@ public class App {
                 if (navigationChoice.equalsIgnoreCase("all events"))
                     for (Event individualEvent : allEvents) {
                         System.out.println("----------------------");
-                        System.out.println(individualEvent.name);
-                        System.out.println(individualEvent.guests);
-                        System.out.println(individualEvent.food);
-                        System.out.println(individualEvent.beverage);
-                        System.out.println(individualEvent.entertainment);
+                        System.out.println(individualEvent.getName());
+                        System.out.println(individualEvent.getGuests());
+                        System.out.println(individualEvent.getFood());
+                        System.out.println(individualEvent.getBeverage());
+                        System.out.println(individualEvent.getEntertainment());
                     } else if (navigationChoice.equalsIgnoreCase("create event")) {
                     System.out.println("Alright, lets create your custom event! What is the event for? Example; Brians artshow, Rachel's wedding, Intel work party");
                     String nameOption = bufferedReader.readLine().toLowerCase();
@@ -86,22 +86,31 @@ public class App {
                     String couponCode = bufferedReader.readLine().toLowerCase();
                     System.out.println(" Roughly how many guests will be attending this event? options include: 50 ,100, 200 ");
                     Integer numberOfGuests = Integer.parseInt(bufferedReader.readLine());
+
                     System.out.println("Noted! What food option would you like? Options include: dessert, mexican food, pizza, cheese plate, cajun food, BBQ, thai food, greek cuisine, chinese food, indian food, or italian cuisine. ");
                     String foodOtion = bufferedReader.readLine().toLowerCase();
+
                     System.out.println(" All events include bar service. Unless specified otherwise, drinks from the bar are à la carte! What beverage option would you like? Options include: open bar, soda, free drink token, wine, or beer.");
                     String beverageOption = bufferedReader.readLine().toLowerCase();
                     System.out.println("Great! Lastly, what entertainment option would you like to book for your event? Options include: karaoke, trivia, guest speaker, live band, Dj, comedy show, or none");
                     String entertainmentOption = bufferedReader.readLine().toLowerCase();
 
                     Event userCreatedEvent = new Event (nameOption,numberOfGuests,foodOtion,beverageOption,entertainmentOption, couponCode);
+                    userCreatedEvent.setCostofGuest(numberOfGuests);
+                    userCreatedEvent.setCostofFood(foodOtion);
+                    userCreatedEvent.setCostofBeverage(beverageOption);
+                    userCreatedEvent.setCostofEntertainment(entertainmentOption);
                     System.out.println("Okay, here is your new Event!");
                     System.out.println("----------------------");
-                    System.out.println(userCreatedEvent.name);
-                    System.out.println(userCreatedEvent.guests);
-                    System.out.println(userCreatedEvent.food);
-                    System.out.println(userCreatedEvent.beverage);
-                    System.out.println(userCreatedEvent.entertainment);
+                    System.out.println("Name of event: " + userCreatedEvent.getName());
+                    System.out.println("number guests: " + userCreatedEvent.getGuests());
+                    System.out.println("Food option: " + userCreatedEvent.getFood());
+                    System.out.println("Beverage option: " + userCreatedEvent.getBeverage());
+                    System.out.println("Entertainment option: " + userCreatedEvent.getEntertainment());
+                    System.out.println("Total price of event: " + "$" + userCreatedEvent.getPrice()+".00");
                     allEvents.add(userCreatedEvent);
+
+
 
                 } else if (navigationChoice.equalsIgnoreCase("exit")) {
                     System.out.println("See you next time!");
