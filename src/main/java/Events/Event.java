@@ -92,11 +92,14 @@ public class Event {
         Integer userInputEntertainmentAndPrice = entertainmentAndPrice.get(input);
         this.price += + userInputEntertainmentAndPrice;
     }
+    public void setDiscountOfCouponCode(String input) {
+        userInputCouponCode.equals(couponCode);
+        this.price -= price*.3;
+    }
+        String couponCode = "Carson";
+         String userInputCouponCode;
 
-
-
-
-        HashMap<String, Integer> foodAndPrice = new HashMap<String, Integer>();{
+    HashMap<String, Integer> foodAndPrice = new HashMap<String, Integer>();{
         foodAndPrice.put("dessert", 125);
         foodAndPrice.put("mexican food", 300);
         foodAndPrice.put("pizza", 250);
@@ -133,6 +136,8 @@ public class Event {
         entertainmentAndPrice.put("dj",100);
         entertainmentAndPrice.put("comedy show", 100);
         entertainmentAndPrice.put("none", 0);
+
+
     }
 
 //    String userInputVariableFoodAndPrice = foodAndPrice.get();
