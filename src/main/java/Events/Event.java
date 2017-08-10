@@ -68,7 +68,7 @@ public class Event {
         this.price = price - userInputDiscountCode;
     }
 
-
+//Hashmap banks to store key value pairs for calculation
     HashMap<String, Integer> foodAndPrice = new HashMap<String, Integer>();{
         foodAndPrice.put("dessert", 125);
         foodAndPrice.put("mexican food", 300);
@@ -112,9 +112,6 @@ public class Event {
         couponAndPrice.put("grill", 100);
     }
 
-//    String userInputVariableFoodAndPrice = foodAndPrice.get();
-//    Integer userInputGuestAndPrice = guestsAndPrice.get();
-////    public Integer eventCost (Event chosenEvent)
 
 }
 
