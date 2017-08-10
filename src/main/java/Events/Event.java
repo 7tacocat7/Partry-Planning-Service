@@ -93,11 +93,10 @@ public class Event {
         this.price += + userInputEntertainmentAndPrice;
     }
     public void setDiscountOfCouponCode(String input) {
-        userInputCouponCode.equals(couponCode);
-        this.price -= price*.3;
+        Integer userInputDiscountCode = couponAndPrice.get(input);
+        this.price = price - userInputDiscountCode;
     }
-        String couponCode = "Carson";
-         String userInputCouponCode;
+
 
     HashMap<String, Integer> foodAndPrice = new HashMap<String, Integer>();{
         foodAndPrice.put("dessert", 125);
@@ -112,23 +111,23 @@ public class Event {
         foodAndPrice.put("indian food", 275);
         foodAndPrice.put("italian cuisine", 350);
     }
-        HashMap<Integer, Integer> guestsAndPrice = new HashMap<Integer, Integer>();{
+    HashMap<Integer, Integer> guestsAndPrice = new HashMap<Integer, Integer>();{
         guestsAndPrice.put(50, 150);
         guestsAndPrice.put(100, 350);
         guestsAndPrice.put(200, 700);
-    }
+}
 
 
-        HashMap<String, Integer> beverageAndPrice = new HashMap<String, Integer>();{
+    HashMap<String, Integer> beverageAndPrice = new HashMap<String, Integer>();{
         beverageAndPrice.put("open bar", 1000);
         beverageAndPrice.put("soda", 50);
         beverageAndPrice.put("free drink token", 150);
         beverageAndPrice.put("wine", 400);
         beverageAndPrice.put("beer", 300);
-    }
+}
 
 
-        HashMap<String, Integer> entertainmentAndPrice = new HashMap<String, Integer>();{
+    HashMap<String, Integer> entertainmentAndPrice = new HashMap<String, Integer>();{
         entertainmentAndPrice.put("karaoke", 150);
         entertainmentAndPrice.put("trivia", 75);
         entertainmentAndPrice.put("guest speaker",120);
@@ -136,8 +135,10 @@ public class Event {
         entertainmentAndPrice.put("dj",100);
         entertainmentAndPrice.put("comedy show", 100);
         entertainmentAndPrice.put("none", 0);
-
-
+}
+    HashMap<String, Integer>couponAndPrice = new HashMap< String, Integer>();{
+        couponAndPrice.put("turntable",150);
+        couponAndPrice.put("grill", 100);
     }
 
 //    String userInputVariableFoodAndPrice = foodAndPrice.get();
