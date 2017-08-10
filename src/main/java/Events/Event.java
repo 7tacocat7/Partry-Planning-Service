@@ -29,49 +29,20 @@ public class Event {
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getGuests() {
         return guests;
     }
-
-    public void setGuests(int guests) {
-        this.guests = guests;
-    }
-
     public String getFood() {
         return food;
     }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
-
     public String getBeverage() {
         return beverage;
-    }
-    public void setBeverage(String beverage) {
-        this.beverage = beverage;
     }
     public String getEntertainment() {
         return entertainment;
     }
-    public void setEntertainment(String entertainment) {
-        this.entertainment = entertainment;
-    }
-    public String getCoupon() {
-        return coupon;
-    }
-    public void setCoupon(String coupon) {
-        this.coupon = coupon;
-    }
     public int getPrice() {
         return price;
-    }
-    public void setPrice(int price) {
-        this.price = price;
     }
 
 //    methods to get inputs of users and calculate total cost
