@@ -63,7 +63,7 @@ public class AppTest {
     @Test
     public void setCostofEntertainment_100(){
         Event testEvent9 = new Event("carson", 200,"mexican food","open bar","dj", "grill");
-        testEvent9.setCostofEntertainment("none");
+        testEvent9.setCostofEntertainment("dj");
         assertEquals(100,testEvent9.getPrice());
     }
 
