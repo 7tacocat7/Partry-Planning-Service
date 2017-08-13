@@ -37,4 +37,9 @@ public class AppTest {
         Event testEvent4 = new Event("carson", 100,"mexican food","wine","dj", "grill");
         assertEquals("dj",testEvent4.getEntertainment());
     }
+    @Test
+    public void newEvent_getsPrice_0(){
+        Event testEvent5 = new Event("carson", 100,"mexican food","wine","dj", "grill");
+        assertEquals(0,testEvent5.getPrice());
+    }
 }
