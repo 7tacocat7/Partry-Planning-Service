@@ -30,6 +30,11 @@ public class AppTest {
     @Test
     public void newEvent_getsBeverage_Wine(){
         Event testEvent3 = new Event("carson", 100,"mexican food","wine","dj", "grill");
-        assertEquals("mexican food",testEvent3.getBeverage());
+        assertEquals("wine",testEvent3.getBeverage());
+    }
+    @Test
+    public void newEvent_getsEntertainment_Dj(){
+        Event testEvent4 = new Event("carson", 100,"mexican food","wine","dj", "grill");
+        assertEquals("wine",testEvent4.getEntertainment());
     }
 }
