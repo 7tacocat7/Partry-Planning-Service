@@ -66,5 +66,13 @@ public class AppTest {
         testEvent9.setCostofEntertainment("dj");
         assertEquals(100,testEvent9.getPrice());
     }
+    @Test
+    public void setDiscountOfCouponCode_0(){
+        Event testEvent10 = new Event("carson", 200,"mexican food","open bar","dj", "grill");
+//        testEvent10.setCostofEntertainment("dj");
+        testEvent10.setDiscountOfCouponCode("grill");
+        assertEquals(0,testEvent10.getPrice());
+    }
+
 
 }
