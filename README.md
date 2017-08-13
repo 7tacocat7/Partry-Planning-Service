@@ -14,7 +14,8 @@ _PartyPlanning-Service is a command line application for createing an all-inclus
 | Behavior      | Input         | Output        |
 | ------------- | ------------- | ------------- |
 |  creates event object        |    event          |      true       |
-|               |               |               |
+|    sets price of event           |    guests = 200           |     price = 700         |
+|    includes discount code          |    coupon = "grill"        |    price  -100         |
 
 * _Clone this repository_
 * https://github.com/7tacocat7/Partry-Planning-Service.git
