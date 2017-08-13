@@ -19,7 +19,7 @@ public class AppTest {
     }
     @Test
     public void newEvent_getsGuest_100(){
-        Event testEvent = new Event("carson", 50,"mexican food","wine","dj", "grill");
-        assertEquals(100,testEvent.getName());
+        Event testEvent1 = new Event("carson", 100,"mexican food","wine","dj", "grill");
+        assertEquals(100,testEvent1.getName());
     }
 }
