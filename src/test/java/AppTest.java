@@ -27,4 +27,9 @@ public class AppTest {
         Event testEvent2 = new Event("carson", 100,"mexican food","wine","dj", "grill");
         assertEquals("mexican food",testEvent2.getFood());
     }
+    @Test
+    public void newEvent_getsBeverage_Wine(){
+        Event testEvent3 = new Event("carson", 100,"mexican food","wine","dj", "grill");
+        assertEquals("mexican food",testEvent3.getBeverage());
+    }
 }
