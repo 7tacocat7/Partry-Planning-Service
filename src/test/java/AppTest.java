@@ -48,4 +48,10 @@ public class AppTest {
         testEvent6.setCostofGuest(200);
         assertEquals(700,testEvent6.getPrice());
     }
+    @Test
+    public void setCostofFood_300(){
+        Event testEvent7 = new Event("carson", 200,"mexican food","wine","dj", "grill");
+        testEvent6.setCostofFood("mexican food");
+        assertEquals(700,testEvent7.getPrice());
+    }
 }
