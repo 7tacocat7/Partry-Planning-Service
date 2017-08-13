@@ -35,6 +35,6 @@ public class AppTest {
     @Test
     public void newEvent_getsEntertainment_Dj(){
         Event testEvent4 = new Event("carson", 100,"mexican food","wine","dj", "grill");
-        assertEquals("wine",testEvent4.getEntertainment());
+        assertEquals("dj",testEvent4.getEntertainment());
     }
 }
