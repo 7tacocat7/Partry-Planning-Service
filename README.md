@@ -24,7 +24,7 @@ _PartyPlanning-Service is a command line application for createing an all-inclus
 
 
 ## Known Bugs
-
+error: _java.lang.NumberFormatException: For input string:_ Only occurs if users enter a non-number as an input for the number of guests imput field.
 
 
 ## Support and contact details
