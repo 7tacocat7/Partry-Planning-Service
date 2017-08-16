@@ -24,7 +24,7 @@ public class App {
 
         while (programRunning) {
             BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(System.in));
-            System.out.println(" Welcome to Canales Party planning specialists! What would you like to do? Enter one of the following options: all events, create event, exit");
+            System.out.println(" Welcome to Canales Party planning specialists!\nWhat would you like to do?\nEnter one of the following options:\nall events, create event, exit");
 
             try {
                 String navigationChoice = bufferedReader.readLine();
@@ -39,23 +39,23 @@ public class App {
                         System.out.println(individualEvent.getEntertainment());
                     } else if (navigationChoice.equalsIgnoreCase("create event")) {
                     System.out.println("-----------------------------------------------");
-                    System.out.println("Alright, lets create your custom event!%n  What is the event for?%n  Example; Brians artshow, Rachel's wedding, Intel work party");
+                    System.out.println("Alright, lets create your custom event!\nWhat is the event for?\nExample; Brians artshow, Rachel's wedding, Intel work party");
                     String nameOption = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println("if you have a coupon code,%n" +" please enter it now to receive  a 100 dollar discount on your food option,%n or 150 dollar discount on your Entertainment option!%n If you don't have one press enter to continue.");
+                    System.out.println("if you have a coupon code, please enter it now to receive  a 100 dollar discount on your food option,\nor 150 dollar discount on your Entertainment option!\nIf you don't have one press enter to continue.");
                     String couponCode = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println(" Roughly how many guests will be attending this event? options include: 50 ,100, 200 ");
+                    System.out.println(" Roughly how many guests will be attending this event?\nOptions include: 50 ,100, 200 ");
                     Integer numberOfGuests = Integer.parseInt(bufferedReader.readLine());
 
                     System.out.println("-----------------------------------------------");
-                    System.out.println("Noted! What food option would you like? Options include: dessert, mexican food, pizza, cheese plate, cajun food, BBQ, thai food, greek cuisine, chinese food, indian food, or italian cuisine. ");
+                    System.out.println("Noted!\nWhat food option would you like?\nOptions include:\ndessert, mexican food, pizza, cheese plate,\ncajun food, BBQ, thai food, greek cuisine,\nchinese food, indian food, or italian cuisine. ");
                     String foodOtion = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println(" All events include bar service. Unless specified otherwise, drinks from the bar are à la carte! What beverage option would you like? Options include: open bar, soda, free drink token, wine, or beer.");
+                    System.out.println(" All events include bar service.\nUnless specified otherwise, drinks from the bar are à la carte!\nWhat beverage option would you like?\nOptions include:\nopen bar, soda, free drink token,\nwine, or beer.");
                     String beverageOption = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println("Great! Lastly, what entertainment option would you like to book for your event? Options include: karaoke, trivia, guest speaker, live band, Dj, comedy show, or none");
+                    System.out.println("Great!\nLastly, what entertainment option would you like to book for your event?\nOptions include:\n karaoke, trivia, guest speaker, live band, Dj, comedy show, or none");
                     String entertainmentOption = bufferedReader.readLine().toLowerCase();
 
                     Event userCreatedEvent = new Event (nameOption,numberOfGuests,foodOtion,beverageOption,entertainmentOption, couponCode);
