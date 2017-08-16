@@ -45,7 +45,7 @@ public class App {
                     System.out.println("if you have a coupon code, please enter it now \nto receive a 100 dollar discount on your food\noption,or 150 dollar discount on your Entertainment\n option!\nIf you don't have one press enter to continue.");
                     String couponCode = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println("Roughly how many guests will be attending this\nevent?\nPlease enter a number.\nOptions include:\n-----------------------------------------------\n50 ,100, 200\n----------------------------------------------- ");
+                    System.out.println("Roughly how many guests will be attending this\nevent?\nPlease enter a number 1-1000.\n-----------------------------------------------\n Examples: 50 ,100, 200\n----------------------------------------------- ");
                     Integer numberOfGuests = Integer.parseInt(bufferedReader.readLine());
 
                     System.out.println("-----------------------------------------------");
@@ -64,6 +64,7 @@ public class App {
                     userCreatedEvent.setCostofBeverage(beverageOption);
                     userCreatedEvent.setCostofEntertainment(entertainmentOption);
                     userCreatedEvent.setDiscountOfCouponCode(couponCode);
+                    System.out.println("\n\n\n\n\n ");
                     System.out.println("-----------------------------------------------");
                     System.out.println("Okay, here is your new Event!");
                     System.out.println("-----------------------------------------------");
@@ -73,7 +74,7 @@ public class App {
                     System.out.println("Beverage option: " + userCreatedEvent.getBeverage());
                     System.out.println("Entertainment option: " + userCreatedEvent.getEntertainment());
                     System.out.println("Total price of event: " + "$" + userCreatedEvent.getPrice()+".00");
-                    System.out.println("\n\n\n\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+                    System.out.println("\n\n\n\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n Scroll above for party details");
                     allEvents.add(userCreatedEvent);
 
 
