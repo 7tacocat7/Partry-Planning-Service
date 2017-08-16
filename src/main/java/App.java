@@ -39,10 +39,10 @@ public class App {
                         System.out.println(individualEvent.getEntertainment());
                     } else if (navigationChoice.equalsIgnoreCase("create event")) {
                     System.out.println("-----------------------------------------------");
-                    System.out.println("Alright, lets create your custom event! What is the event for? Example; Brians artshow, Rachel's wedding, Intel work party");
+                    System.out.println("Alright, lets create your custom event!%n  What is the event for?%n  Example; Brians artshow, Rachel's wedding, Intel work party");
                     String nameOption = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
-                    System.out.println("if you have a coupon code please enter it now to receive  a 100 dollar discount on your food option or 150 dollar discount on your Entertainment option! If you don't have one press enter to continue.");
+                    System.out.println("if you have a coupon code,%n" +" please enter it now to receive  a 100 dollar discount on your food option,%n or 150 dollar discount on your Entertainment option!%n If you don't have one press enter to continue.");
                     String couponCode = bufferedReader.readLine().toLowerCase();
                     System.out.println("-----------------------------------------------");
                     System.out.println(" Roughly how many guests will be attending this event? options include: 50 ,100, 200 ");

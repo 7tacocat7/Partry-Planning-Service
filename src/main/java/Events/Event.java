@@ -49,23 +49,44 @@ public class Event {
 
     public void setCostofGuest(int input) {
         Integer userInputGuestAndPrice = guestsAndPrice.get(input);
-        this.price += + userInputGuestAndPrice;
+        if (input <= 49){
+            this.price = price +100;
+        }else if ( input < 99 && input != 50) {
+            this.price = price + 330;
+        }else if (input <= 199 && input != 100){this.price += 600;
+        } else if (input <= 1000 && input != 200){
+            this.price += 1000;
+        }
+//        if (userInputGuestAndPrice == null)  {
+
     }
     public void setCostofFood(String input) {
         Integer userInputFoodAndPrice = foodAndPrice.get(input);
-        this.price += + userInputFoodAndPrice;
+        if (userInputFoodAndPrice == null) {
+            this.food = "no food option";
+            this.price += 0;
+        }else { this.price += userInputFoodAndPrice;}
+
     }
       public void setCostofBeverage(String input) {
         Integer userInputBeverageAndPrice = beverageAndPrice.get(input);
-        this.price += + userInputBeverageAndPrice;
-    }
+      if (userInputBeverageAndPrice == null) {
+          this.beverage = "no beverage option";
+          this.price += 0;
+      }else { this.price += userInputBeverageAndPrice;}
+}
     public void setCostofEntertainment(String input) {
         Integer userInputEntertainmentAndPrice = entertainmentAndPrice.get(input);
-        this.price += + userInputEntertainmentAndPrice;
+        if (userInputEntertainmentAndPrice == null) {
+            this.entertainment = "no entertainment option";
+            this.price += 0;
+        }else { this.price += userInputEntertainmentAndPrice;}
     }
     public void setDiscountOfCouponCode(String input) {
         Integer userInputDiscountCode = couponAndPrice.get(input);
-        this.price = price - userInputDiscountCode;
+        if (userInputDiscountCode == null){
+            this.price = price - 0;
+        }else {this.price = price - userInputDiscountCode;}
     }
 
 //Hashmap banks to store key value pairs for calculation
