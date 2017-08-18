@@ -49,15 +49,15 @@ public class Event {
 
     public void setCostofGuest(int input) {
         Integer userInputGuestAndPrice = guestsAndPrice.get(input);
-        if (input <= 49){
-            this.price = price +100;
-        }else if ( input < 99 && input != 50) {
-            this.price = price + 330;
-        }else if (input <= 199 && input != 100){this.price += 600;
-        } else if (input <= 1000 && input != 200){
+        if (input <= 45){
+            this.price = price +150;
+        }else if ( input < 100 && input != 50) {
+            this.price = price + 350;
+        }else if (input <= 199 && input != 100 && input != 50){this.price += 600;
+        } else if (input <= 1000 && input != 200 && input != 50){
             this.price += 1000;
         }
-//        if (userInputGuestAndPrice == null)  {
+        else {this.price += userInputGuestAndPrice;}
 
     }
     public void setCostofFood(String input) {
