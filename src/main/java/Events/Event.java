@@ -54,7 +54,7 @@ public class Event {
         }else if ( input < 100 && input != 50) {
             this.price = price + 350;
         }else if (input <= 199 && input != 100 && input != 50){this.price += 600;
-        } else if (input <= 1000 && input != 200 && input != 50){
+        } else if (input <= 1000 && input != 200 && input != 50 && input != 100){
             this.price += 1000;
         }
         else {this.price += userInputGuestAndPrice;}
